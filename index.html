@@ -1,13 +1,299 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Vladimir Sinitsyn — GEO & AI Search</title>
+
+  <meta name="description" content="Vladimir Sinitsyn — GEO and AI Search researcher focused on AI visibility, Entity SEO, search systems and generative search.">
+
+  <meta name="author" content="Vladimir Sinitsyn">
+
+  <link rel="canonical" href="https://vladimirsinitsyn.com/">
+
+  <meta property="og:title" content="Vladimir Sinitsyn — GEO & AI Search">
+  <meta property="og:description" content="Research on GEO, AI Search, Entity SEO and search visibility.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vladimirsinitsyn.com/">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #171717;
+      --muted: #666666;
+      --line: #e8e8e8;
+      --accent: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(100% - 40px, 960px);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    main {
+      padding: 100px 0 80px;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 8vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      max-width: 850px;
+      margin: 0 0 28px;
+    }
+
+    .intro {
+      max-width: 680px;
+      font-size: 21px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .links a {
+      display: inline-block;
+      padding: 11px 17px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      border-color: #999;
+    }
+
+    section {
+      padding: 60px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-size: 28px;
+      letter-spacing: -0.03em;
+      margin: 0 0 18px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .topic {
+      background: white;
+      padding: 24px;
+    }
+
+    .topic strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .topic span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      main {
+        padding: 65px 0 55px;
+      }
+
+      .intro {
+        font-size: 18px;
+      }
+
+      .topics {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vladimir Sinitsyn",
+    "url": "https://vladimirsinitsyn.com/",
+    "jobTitle": "GEO & AI Search Specialist",
+    "description": "GEO and AI Search researcher focused on AI visibility, Entity SEO and search systems."
+  }
+  </script>
 </head>
+
 <body>
-  <h1>Vladimir Sinitsyn</h1>
-  <p>GEO & AI Search</p>
-  <p>Research on AI Search, Entity SEO and search visibility.</p>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Vladimir Sinitsyn</div>
+
+        <div>
+          <a href="#research">Research</a>
+          <a href="#topics">Topics</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="container">
+
+      <div class="eyebrow">GEO · AI Search · Entity SEO</div>
+
+      <h1>Researching how people and brands become visible to AI.</h1>
+
+      <p class="intro">
+        Vladimir Sinitsyn is a GEO and AI Search specialist researching
+        generative search, entity visibility, AI recommendations and
+        the systems behind modern search.
+      </p>
+
+      <div class="links">
+        <a href="#research">Explore research</a>
+        <a href="#about">About Vladimir</a>
+      </div>
+
+      <section id="research">
+
+        <h2>Research</h2>
+
+        <p class="intro">
+          Experiments, observations and practical research into
+          AI Search, GEO and Entity SEO.
+        </p>
+
+      </section>
+
+      <section id="topics">
+
+        <h2>Research areas</h2>
+
+        <div class="topics">
+
+          <div class="topic">
+            <strong>AI Search</strong>
+            <span>How generative search systems discover, interpret and recommend information.</span>
+          </div>
+
+          <div class="topic">
+            <strong>GEO</strong>
+            <span>Methods for increasing visibility inside AI-generated search experiences.</span>
+          </div>
+
+          <div class="topic">
+            <strong>Entity SEO</strong>
+            <span>Building clear and consistent digital entities across the web.</span>
+          </div>
+
+          <div class="topic">
+            <strong>Search Systems</strong>
+            <span>Technical and content systems behind modern search visibility.</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="about">
+
+        <h2>About</h2>
+
+        <p class="intro">
+          Vladimir Sinitsyn works at the intersection of SEO, GEO,
+          AI Search and technical search systems.
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Vladimir Sinitsyn · GEO & AI Search
+    </div>
+  </footer>
+
 </body>
 </html>
+```
