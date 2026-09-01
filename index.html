@@ -1,190 +1,427 @@
-```html
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <title>Vladimir Sinitsyn — GEO & AI Search</title>
 
-  <meta name="description" content="Vladimir Sinitsyn — GEO and AI Search researcher focused on AI visibility, Entity SEO, search systems and generative search.">
+  <meta name="description"
+        content="Vladimir Sinitsyn — GEO & AI Search specialist researching AI visibility, generative search, Entity SEO and modern search systems.">
 
   <meta name="author" content="Vladimir Sinitsyn">
 
   <link rel="canonical" href="https://vladimirsinitsyn.com/">
 
   <meta property="og:title" content="Vladimir Sinitsyn — GEO & AI Search">
-  <meta property="og:description" content="Research on GEO, AI Search, Entity SEO and search visibility.">
+  <meta property="og:description"
+        content="Researching how people, brands and information become visible to AI Search.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vladimirsinitsyn.com/">
 
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #171717;
-      --muted: #666666;
-      --line: #e8e8e8;
-      --accent: #111111;
+      --background: #f7f7f5;
+      --surface: #ffffff;
+      --text: #151515;
+      --muted: #737373;
+      --border: #deded9;
+      --soft: #eeeeea;
+      --max: 1180px;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--background);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.6;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .container {
-      width: min(100% - 40px, 960px);
+      width: min(calc(100% - 48px), var(--max));
       margin: 0 auto;
     }
 
+    /* HEADER */
+
     header {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--border);
+      background: rgba(247,247,245,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-size: 15px;
+      font-weight: 650;
+      letter-spacing: -.02em;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-weight: 400;
     }
 
     nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 22px;
-      font-size: 14px;
+      transition: color .2s ease;
     }
 
     nav a:hover {
       color: var(--text);
     }
 
-    main {
-      padding: 100px 0 80px;
+    /* HERO */
+
+    .hero {
+      padding: 125px 0 115px;
+      border-bottom: 1px solid var(--border);
     }
 
     .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       color: var(--muted);
-      font-size: 14px;
-      letter-spacing: 0.08em;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .14em;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: #999;
     }
 
     h1 {
-      font-size: clamp(44px, 8vw, 82px);
-      line-height: 0.98;
-      letter-spacing: -0.055em;
-      max-width: 850px;
-      margin: 0 0 28px;
+      max-width: 980px;
+      margin: 0;
+      font-size: clamp(48px, 7vw, 88px);
+      line-height: .98;
+      letter-spacing: -.065em;
+      font-weight: 650;
     }
+
+    .hero-description {
+      max-width: 690px;
+      margin: 38px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border: 1px solid var(--text);
+      border-radius: 4px;
+      font-size: 14px;
+      transition: all .2s ease;
+    }
+
+    .button.primary {
+      background: var(--text);
+      color: white;
+    }
+
+    .button.primary:hover {
+      opacity: .82;
+    }
+
+    .button.secondary {
+      border-color: var(--border);
+      background: var(--surface);
+    }
+
+    .button.secondary:hover {
+      border-color: #aaa;
+    }
+
+    /* INTRO */
 
     .intro {
-      max-width: 680px;
-      font-size: 21px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 70px;
+      padding: 85px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
       color: var(--muted);
-      margin-bottom: 48px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .13em;
+      text-transform: uppercase;
     }
 
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .intro-text {
+      max-width: 720px;
+      font-size: 27px;
+      line-height: 1.35;
+      letter-spacing: -.025em;
     }
 
-    .links a {
-      display: inline-block;
-      padding: 11px 17px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .links a:hover {
-      border-color: #999;
-    }
+    /* RESEARCH */
 
     section {
-      padding: 60px 0;
-      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 30px;
+      margin-bottom: 40px;
     }
 
     h2 {
-      font-size: 28px;
-      letter-spacing: -0.03em;
-      margin: 0 0 18px;
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: -.045em;
+      line-height: 1;
     }
 
-    .topics {
+    .research-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
+      background: var(--border);
+      border: 1px solid var(--border);
     }
 
-    .topic {
-      background: white;
-      padding: 24px;
+    .research-card {
+      background: var(--surface);
+      padding: 35px;
+      min-height: 210px;
+      transition: background .2s ease;
     }
 
-    .topic strong {
-      display: block;
-      margin-bottom: 6px;
+    .research-card:hover {
+      background: #fafaf8;
     }
 
-    .topic span {
+    .number {
+      color: #999;
+      font-size: 12px;
+      margin-bottom: 55px;
+    }
+
+    .research-card h3 {
+      margin: 0 0 9px;
+      font-size: 22px;
+      letter-spacing: -.025em;
+    }
+
+    .research-card p {
+      margin: 0;
       color: var(--muted);
+      font-size: 15px;
+      max-width: 470px;
+    }
+
+    /* FEATURED */
+
+    .featured {
+      padding: 85px 0;
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 60px;
+      padding: 48px;
+      background: var(--text);
+      color: white;
+      border-radius: 5px;
+    }
+
+    .featured-label {
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .featured h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.05;
+      max-width: 680px;
+    }
+
+    .featured-description {
+      color: #aaa;
+      font-size: 15px;
+      line-height: 1.65;
+      align-self: end;
+    }
+
+    .featured-link {
+      display: inline-block;
+      margin-top: 25px;
+      color: white;
+      border-bottom: 1px solid #777;
+      padding-bottom: 4px;
       font-size: 14px;
     }
 
+    /* ABOUT */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 70px;
+    }
+
+    .about-text {
+      max-width: 720px;
+      font-size: 18px;
+      color: #444;
+    }
+
+    .about-text p {
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    /* FOOTER */
+
     footer {
-      padding: 35px 0;
-      border-top: 1px solid var(--line);
+      padding: 45px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
       color: var(--muted);
       font-size: 13px;
     }
 
-    @media (max-width: 650px) {
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+
+      .container {
+        width: min(calc(100% - 32px), var(--max));
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
       nav {
-        align-items: flex-start;
-        flex-direction: column;
+        display: none;
       }
 
-      nav a {
-        margin-left: 0;
-        margin-right: 18px;
+      .hero {
+        padding: 80px 0 75px;
       }
 
-      main {
-        padding: 65px 0 55px;
-      }
-
-      .intro {
+      .hero-description {
         font-size: 18px;
       }
 
-      .topics {
+      .intro,
+      .about {
         grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 65px 0;
+      }
+
+      .intro-text {
+        font-size: 22px;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured {
+        padding: 65px 0;
+      }
+
+      .featured-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 30px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
       }
     }
   </style>
 
+  <!-- Person / Entity structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -192,108 +429,325 @@
     "name": "Vladimir Sinitsyn",
     "url": "https://vladimirsinitsyn.com/",
     "jobTitle": "GEO & AI Search Specialist",
-    "description": "GEO and AI Search researcher focused on AI visibility, Entity SEO and search systems."
+    "description": "GEO and AI Search specialist researching AI visibility, generative search, Entity SEO and modern search systems."
   }
   </script>
+
 </head>
 
 <body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">Vladimir Sinitsyn</div>
+<header>
+  <div class="container header-inner">
 
-        <div>
-          <a href="#research">Research</a>
-          <a href="#topics">Topics</a>
-          <a href="#about">About</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+    <a href="/" class="brand">
+      Vladimir Sinitsyn <span>/ GEO & AI Search</span>
+    </a>
 
-  <main>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#topics">Topics</a>
+      <a href="#about">About</a>
+    </nav>
 
-    <div class="container">
+  </div>
+</header>
 
-      <div class="eyebrow">GEO · AI Search · Entity SEO</div>
 
-      <h1>Researching how people and brands become visible to AI.</h1>
+<main>
 
-      <p class="intro">
-        Vladimir Sinitsyn is a GEO and AI Search specialist researching
-        generative search, entity visibility, AI recommendations and
-        the systems behind modern search.
-      </p>
+  <!-- HERO -->
 
-      <div class="links">
-        <a href="#research">Explore research</a>
-        <a href="#about">About Vladimir</a>
+  <div class="container">
+    <section class="hero">
+
+      <div class="eyebrow">
+        GEO · AI Search · Entity SEO
       </div>
 
-      <section id="research">
+      <h1>
+        Researching how people and brands become visible to AI.
+      </h1>
 
+      <p class="hero-description">
+        Vladimir Sinitsyn is a GEO & AI Search specialist researching
+        generative search, AI visibility, Entity SEO and the systems
+        behind modern search.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#research">
+          Explore research
+        </a>
+
+        <a class="button secondary"
+           href="https://www.linkedin.com/"
+           target="_blank"
+           rel="noopener">
+          Connect
+        </a>
+      </div>
+
+    </section>
+  </div>
+
+
+  <!-- POSITIONING -->
+
+  <section>
+    <div class="container">
+
+      <div class="intro">
+
+        <div class="section-label">
+          What I study
+        </div>
+
+        <div class="intro-text">
+          Search is moving from lists of links to answers generated
+          by AI. I study what makes a person, company or information
+          source discoverable, understandable and recommendable inside
+          these systems.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- RESEARCH -->
+
+  <section id="research">
+
+    <div class="container section">
+
+      <div class="section-heading">
         <h2>Research</h2>
+        <span class="section-label">Selected areas</span>
+      </div>
 
-        <p class="intro">
-          Experiments, observations and practical research into
-          AI Search, GEO and Entity SEO.
-        </p>
+      <div class="research-grid">
 
-      </section>
+        <article class="research-card">
 
-      <section id="topics">
+          <div class="number">01</div>
 
-        <h2>Research areas</h2>
+          <h3>AI Search</h3>
 
-        <div class="topics">
+          <p>
+            How generative search systems discover, interpret,
+            compare and recommend information.
+          </p>
 
-          <div class="topic">
-            <strong>AI Search</strong>
-            <span>How generative search systems discover, interpret and recommend information.</span>
+        </article>
+
+
+        <article class="research-card">
+
+          <div class="number">02</div>
+
+          <h3>Generative Engine Optimization</h3>
+
+          <p>
+            Methods for improving visibility and representation
+            inside AI-generated search experiences.
+          </p>
+
+        </article>
+
+
+        <article class="research-card">
+
+          <div class="number">03</div>
+
+          <h3>Entity SEO</h3>
+
+          <p>
+            How search engines and AI systems construct entities,
+            relationships and understanding around people and brands.
+          </p>
+
+        </article>
+
+
+        <article class="research-card">
+
+          <div class="number">04</div>
+
+          <h3>Search Systems</h3>
+
+          <p>
+            Technical SEO, content architecture and information
+            systems behind modern search visibility.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURED RESEARCH -->
+
+  <section>
+
+    <div class="container featured">
+
+      <div class="featured-card">
+
+        <div>
+
+          <div class="featured-label">
+            Featured research
           </div>
 
-          <div class="topic">
-            <strong>GEO</strong>
-            <span>Methods for increasing visibility inside AI-generated search experiences.</span>
-          </div>
+          <h2>
+            Google Gemini knows me in Russian — but recommends my competitors in English.
+          </h2>
 
-          <div class="topic">
-            <strong>Entity SEO</strong>
-            <span>Building clear and consistent digital entities across the web.</span>
-          </div>
-
-          <div class="topic">
-            <strong>Search Systems</strong>
-            <span>Technical and content systems behind modern search visibility.</span>
-          </div>
+          <a
+            class="featured-link"
+            href="https://hackernoon.com/google-gemini-knows-me-in-russian-but-recommends-my-competitors-in-english"
+            target="_blank"
+            rel="noopener">
+            Read the experiment →
+          </a>
 
         </div>
 
-      </section>
+        <div class="featured-description">
 
-      <section id="about">
+          A practical experiment exploring how language,
+          entity recognition and search context can influence
+          AI-generated recommendations.
 
-        <h2>About</h2>
+        </div>
 
-        <p class="intro">
-          Vladimir Sinitsyn works at the intersection of SEO, GEO,
-          AI Search and technical search systems.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TOPICS -->
+
+  <section id="topics">
+
+    <div class="container section">
+
+      <div class="section-heading">
+        <h2>Topics</h2>
+        <span class="section-label">Areas of interest</span>
+      </div>
+
+      <div class="research-grid">
+
+        <article class="research-card">
+          <div class="number">AI</div>
+          <h3>Generative Search</h3>
+          <p>
+            AI Overviews, answer engines, LLM-based search
+            and recommendation systems.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="number">GEO</div>
+          <h3>AI Visibility</h3>
+          <p>
+            Understanding how brands become visible in
+            generative answers.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="number">SEO</div>
+          <h3>Entity Architecture</h3>
+          <p>
+            Structured information, relationships and
+            signals that establish digital entities.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="number">TECH</div>
+          <h3>Technical SEO</h3>
+          <p>
+            Architecture, crawling, indexing and scalable
+            search systems.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container section about">
+
+      <div class="section-label">
+        About
+      </div>
+
+      <div class="about-text">
+
+        <p>
+          I'm Vladimir Sinitsyn, a GEO & AI Search specialist
+          working at the intersection of SEO, search technology
+          and artificial intelligence.
         </p>
 
-      </section>
+        <p>
+          This website is my research hub — a place for experiments,
+          observations, case studies and ideas about how search is
+          changing in the age of generative AI.
+        </p>
+
+      </div>
 
     </div>
 
-  </main>
+  </section>
 
-  <footer>
-    <div class="container">
-      © 2026 Vladimir Sinitsyn · GEO & AI Search
+</main>
+
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+      © 2026 Vladimir Sinitsyn
     </div>
-  </footer>
+
+    <div class="footer-links">
+      <a href="https://github.com/seopartner71-ux"
+         target="_blank"
+         rel="noopener">
+        GitHub
+      </a>
+
+      <a href="https://hackernoon.com/"
+         target="_blank"
+         rel="noopener">
+        HackerNoon
+      </a>
+    </div>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
-```
