@@ -71,6 +71,9 @@
       border-bottom: 1px solid var(--border);
       background: rgba(247,247,245,.92);
       backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .header-inner {
@@ -166,6 +169,7 @@
       border-radius: 4px;
       font-size: 14px;
       transition: all .2s ease;
+      cursor: pointer;
     }
 
     .button.primary {
@@ -210,8 +214,75 @@
       letter-spacing: -.025em;
     }
 
+    /* THE BOOK SECTION */
+    .book-card {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+      gap: 50px;
+      padding: 50px;
+      background: var(--text);
+      color: white;
+      border-radius: 8px;
+      align-items: center;
+      margin-top: 85px;
+      margin-bottom: 85px;
+    }
+
+    .book-cover-img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 4px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      transition: transform .3s ease;
+      display: block;
+    }
+
+    .book-cover-img:hover {
+      transform: translateY(-5px);
+    }
+
+    .book-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn-book {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      transition: all .2s ease;
+    }
+
+    .btn-book.primary {
+      background: white;
+      color: var(--text);
+    }
+
+    .btn-book.primary:hover {
+      background: #e0e0e0;
+    }
+
+    .btn-book.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid #555;
+    }
+
+    .btn-book.secondary:hover {
+      border-color: #aaa;
+      background: rgba(255,255,255,0.05);
+    }
+
     /* RESEARCH & PUBLICATIONS */
-    section {
+    section.bordered-section {
       border-bottom: 1px solid var(--border);
     }
 
@@ -449,41 +520,64 @@
       .footer-inner {
         flex-direction: column;
       }
+      .book-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 30px;
+      }
+      .book-cover-img {
+        max-width: 200px;
+        margin: 0 auto;
+      }
     }
   </style>
 
-  <!-- Person / Entity structured data -->
+  <!-- Entity Structured Data (Person + Book) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Vladimir Sinitsyn",
-    "url": "https://vladimirsinitsyn.com/",
-    "jobTitle": "GEO Architect & AI Search Expert",
-    "description": "Developer of GEO (Generative Engine Optimization) methodologies and creator of the SEO-Module software.",
-    "knowsAbout": [
-      "Generative Engine Optimization",
-      "GEO",
-      "AI Visibility",
-      "Entity SEO",
-      "Large Language Models",
-      "RAG Architecture"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "System SEO (Системное SEO)",
-      "url": "https://systemnoe-seo.ru/"
-    },
-    "sameAs": [
-      "https://github.com/seopartner71-ux",
-      "https://orcid.org/0009-0008-2784-2888",
-      "https://zenodo.org/records/22762586",
-      "https://osf.io/preprints/metaarxiv/2syjb",
-      "https://hackernoon.com/u/seotula",
-      "https://independent.academia.edu/VladimirSinitsyn",
-      "https://www.crunchbase.com/person/vladimir-sinitsyn",
-      "https://twitter.com/Partner71Seo",
-      "https://systemnoe-seo.ru/"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://vladimirsinitsyn.com/#person",
+        "name": "Vladimir Sinitsyn",
+        "url": "https://vladimirsinitsyn.com/",
+        "jobTitle": "GEO Architect & AI Search Expert",
+        "description": "Developer of GEO (Generative Engine Optimization) methodologies and creator of the SEO-Module software.",
+        "knowsAbout": [
+          "Generative Engine Optimization",
+          "GEO",
+          "AI Visibility",
+          "Entity SEO",
+          "Large Language Models",
+          "RAG Architecture"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "System SEO (Системное SEO)",
+          "url": "https://systemnoe-seo.ru/"
+        },
+        "sameAs": [
+          "https://github.com/seopartner71-ux",
+          "https://orcid.org/0009-0008-2784-2888",
+          "https://zenodo.org/records/22762586",
+          "https://osf.io/preprints/metaarxiv/2syjb",
+          "https://hackernoon.com/u/seotula",
+          "https://independent.academia.edu/VladimirSinitsyn",
+          "https://www.crunchbase.com/person/vladimir-sinitsyn",
+          "https://twitter.com/Partner71Seo",
+          "https://systemnoe-seo.ru/"
+        ]
+      },
+      {
+        "@type": "Book",
+        "@id": "https://vladimirsinitsyn.com/#book",
+        "name": "GEO and AI Search. How to Build Verifiable Visibility in Generative Answers for Your Business",
+        "author": { "@id": "https://vladimirsinitsyn.com/#person" },
+        "isbn": "9798237710076",
+        "inLanguage": "en",
+        "url": "https://books.apple.com/us/book/geo-and-ai-search-how-to-build-verifiable-visibility/id6822404827"
+      }
     ]
   }
   </script>
@@ -500,6 +594,7 @@
     </a>
 
     <nav>
+      <a href="#book">Book</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#topics">Topics</a>
@@ -529,15 +624,12 @@
       </p>
 
       <div class="hero-actions">
-        <a class="button primary" href="#research">
-          Explore research
+        <a class="button primary" href="#book">
+          Read my new book
         </a>
 
-        <a class="button secondary"
-           href="https://twitter.com/Partner71Seo"
-           target="_blank"
-           rel="noopener">
-          Connect on X
+        <a class="button secondary" href="#research">
+          Explore research
         </a>
       </div>
 
@@ -546,7 +638,7 @@
 
 
   <!-- POSITIONING -->
-  <section>
+  <section class="bordered-section">
     <div class="container">
 
       <div class="intro">
@@ -567,9 +659,47 @@
     </div>
   </section>
 
+  <!-- THE BOOK -->
+  <section id="book" class="bordered-section">
+    <div class="container">
+      <div class="book-card">
+        
+        <div class="book-cover">
+          <img src="https://raw.githubusercontent.com/seopartner71-ux/vladimirsinitsyn.github.io/refs/heads/main/image%20(1).jpg" alt="GEO and AI Search Book Cover" class="book-cover-img">
+        </div>
+
+        <div class="book-info">
+          <div class="featured-label" style="color: #aaa; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 20px;">
+            Now Available Worldwide
+          </div>
+          
+          <h2 style="font-size: clamp(28px, 4vw, 42px); line-height: 1.1; margin: 0 0 15px 0; color: white;">
+            GEO and AI Search. How to Build Verifiable Visibility in Generative Answers.
+          </h2>
+          
+          <p style="color: #ccc; font-size: 16px; line-height: 1.6; margin: 0; max-width: 600px;">
+            Stop guessing how AI systems see your company. Written by a Data Engineer and SEO architect with 20 years of experience, this playbook provides a strict, mathematically verifiable protocol for Generative Engine Optimization. Learn how to protect your brand's digital entity from the "Silent Logic Bomb" and dominate AI search.
+          </p>
+
+          <div class="book-links">
+            <a href="https://books.apple.com/us/book/geo-and-ai-search-how-to-build-verifiable-visibility/id6822404827" target="_blank" rel="noopener" class="btn-book primary">
+              Apple Books
+            </a>
+            <a href="https://www.barnesandnoble.com/w/geo-and-ai-search-how-to-build-verifiable-visibility-in-generative-answers-for-your-business-vladimir-sinitsyn/1151663719?ean=2940197249173" target="_blank" rel="noopener" class="btn-book secondary">
+              Barnes & Noble
+            </a>
+            <a href="https://www.kobo.com/fi/en/ebook/geo-and-ai-search-how-to-build-verifiable-visibility-in-generative-answers-for-your-business?sId=e54f2b75-0f13-492f-9b59-3a87dde2d1aa&ssId=pXjhYrFF6AO5DaAtU6g7Y" target="_blank" rel="noopener" class="btn-book secondary">
+              Kobo
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- RESEARCH -->
-  <section id="research">
+  <section id="research" class="bordered-section">
 
     <div class="container section">
 
@@ -624,7 +754,7 @@
 
 
   <!-- FEATURED RESEARCH -->
-  <section>
+  <section class="bordered-section">
 
     <div class="container featured">
 
@@ -664,7 +794,7 @@
   
   
   <!-- PUBLICATIONS -->
-  <section id="publications">
+  <section id="publications" class="bordered-section">
     <div class="container section">
       <div class="section-heading">
         <h2>Publications & Media</h2>
@@ -726,7 +856,7 @@
 
 
   <!-- TOPICS -->
-  <section id="topics">
+  <section id="topics" class="bordered-section">
 
     <div class="container section">
 
