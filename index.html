@@ -281,6 +281,69 @@
       background: rgba(255,255,255,0.05);
     }
 
+    /* HACKERNOON INTERVIEW BANNER */
+    .interview-card {
+      margin-top: 40px;
+      margin-bottom: 50px;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,255,0,0.1);
+      border: 1px solid #333;
+    }
+
+    .interview-image {
+      width: 100%;
+      display: block;
+      transition: opacity .3s ease;
+    }
+
+    .interview-card:hover .interview-image {
+      opacity: 0.9;
+    }
+
+    .interview-content {
+      padding: 30px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: #111;
+    }
+
+    .interview-text h3 {
+      color: #fff;
+      margin: 0 0 10px 0;
+      font-size: 24px;
+    }
+
+    .interview-text p {
+      color: #00FF00;
+      margin: 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-hackernoon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      background: #00FF00;
+      color: #000;
+      font-weight: bold;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      transition: all .2s ease;
+    }
+
+    .btn-hackernoon:hover {
+      background: #fff;
+    }
+
     /* RESEARCH & PUBLICATIONS */
     section.bordered-section {
       border-bottom: 1px solid var(--border);
@@ -529,6 +592,11 @@
         max-width: 200px;
         margin: 0 auto;
       }
+      .interview-content {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+      }
     }
   </style>
 
@@ -567,7 +635,8 @@
           "https://www.crunchbase.com/person/vladimir-sinitsyn",
           "https://twitter.com/Partner71Seo",
           "https://systemnoe-seo.ru/",
-          "https://www.cossa.ru/trends/351418/"
+          "https://www.cossa.ru/trends/351418/",
+          "https://hackernoon.com/meet-the-writer-hacker-noons-contributor-vladimir-sinitsyn-seo-practitioner-and-researcher"
         ]
       },
       {
@@ -802,6 +871,22 @@
         <span class="section-label">Articles and Case Studies</span>
       </div>
       
+      <!-- HACKERNOON BANNER -->
+      <div class="interview-card">
+        <a href="https://hackernoon.com/meet-the-writer-hacker-noons-contributor-vladimir-sinitsyn-seo-practitioner-and-researcher" target="_blank" rel="noopener">
+          <img src="https://hackernoon.imgix.net/images/Rd8z9ArVMycSceC003hxVrAXoj23-h893bph.jpeg?auto=format%2Ccompress&w=1200" alt="HackerNoon Interview - Vladimir Sinitsyn" class="interview-image">
+        </a>
+        <div class="interview-content">
+          <div class="interview-text">
+            <p>Exclusive Interview</p>
+            <h3>Meet the Writer: HackerNoon's Contributor Spotlight</h3>
+          </div>
+          <a href="https://hackernoon.com/meet-the-writer-hacker-noons-contributor-vladimir-sinitsyn-seo-practitioner-and-researcher" target="_blank" rel="noopener" class="btn-hackernoon">
+            Read Interview
+          </a>
+        </div>
+      </div>
+      
       <div class="publications-list">
         
         <!-- ACADEMIC PREPRINTS (ZENODO & OSF) -->
@@ -822,16 +907,15 @@
         </article>
 
         <article class="pub-item">
-          <div class="pub-meta"><strong>Hacker Noon</strong> / Case Study</div>
-          <h3>Google Gemini Knows Me in Russian — But Recommends My Competitors in English</h3>
-          <a href="https://hackernoon.com/google-gemini-knows-me-in-russian-but-recommends-my-competitors-in-english" target="_blank" rel="noopener" class="pub-link">Read article &rarr;</a>
-        </article>
-        
-        <!-- NEW COSSA ARTICLE -->
-        <article class="pub-item">
           <div class="pub-meta"><strong>Cossa.ru</strong> / Risk Management & AI</div>
           <h3>Как ошибка AI стоила клиенту покупателя и что мы построили в агентстве</h3>
           <a href="https://www.cossa.ru/trends/351418/" target="_blank" rel="noopener" class="pub-link">Read article &rarr;</a>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-meta"><strong>Hacker Noon</strong> / Case Study</div>
+          <h3>Google Gemini Knows Me in Russian — But Recommends My Competitors in English</h3>
+          <a href="https://hackernoon.com/google-gemini-knows-me-in-russian-but-recommends-my-competitors-in-english" target="_blank" rel="noopener" class="pub-link">Read article &rarr;</a>
         </article>
         
         <article class="pub-item">
