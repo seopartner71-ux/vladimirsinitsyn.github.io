@@ -281,67 +281,84 @@
       background: rgba(255,255,255,0.05);
     }
 
-    /* HACKERNOON INTERVIEW BANNER */
+    /* HACKERNOON COMPACT BANNER */
     .interview-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
       margin-top: 40px;
       margin-bottom: 50px;
-      background: #000;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,255,0,0.1);
-      border: 1px solid #333;
+      padding: 30px 40px;
+      background: #0a0a0a;
+      border-radius: 6px;
+      border-left: 4px solid #00FF00;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
 
-    .interview-image {
-      width: 100%;
-      display: block;
-      transition: opacity .3s ease;
+    .interview-info {
+      flex: 1;
+      max-width: 600px;
     }
 
-    .interview-card:hover .interview-image {
+    .interview-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .interview-meta img {
+      height: 18px;
       opacity: 0.9;
     }
 
-    .interview-content {
-      padding: 30px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      background: #111;
-    }
-
-    .interview-text h3 {
-      color: #fff;
-      margin: 0 0 10px 0;
-      font-size: 24px;
-    }
-
-    .interview-text p {
+    .interview-meta span {
       color: #00FF00;
-      margin: 0;
-      font-size: 14px;
+      font-size: 11px;
+      font-family: monospace;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.1em;
+    }
+
+    .interview-info h3 {
+      color: #ffffff;
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .interview-info p {
+      color: #999;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .interview-action {
+      flex-shrink: 0;
     }
 
     .btn-hackernoon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 24px;
-      background: #00FF00;
-      color: #000;
-      font-weight: bold;
+      padding: 10px 20px;
+      background: rgba(0, 255, 0, 0.1);
+      color: #00FF00;
+      font-weight: 600;
+      font-size: 13px;
+      border: 1px solid rgba(0, 255, 0, 0.3);
       border-radius: 4px;
       text-transform: uppercase;
-      letter-spacing: .05em;
-      transition: all .2s ease;
+      letter-spacing: 0.05em;
+      transition: all 0.2s ease;
     }
 
     .btn-hackernoon:hover {
-      background: #fff;
+      background: #00FF00;
+      color: #000;
     }
 
     /* RESEARCH & PUBLICATIONS */
@@ -592,10 +609,11 @@
         max-width: 200px;
         margin: 0 auto;
       }
-      .interview-content {
-        padding: 20px;
-        justify-content: center;
-        text-align: center;
+      .interview-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+        gap: 25px;
       }
     }
   </style>
@@ -871,18 +889,19 @@
         <span class="section-label">Articles and Case Studies</span>
       </div>
       
-      <!-- HACKERNOON BANNER -->
+      <!-- HACKERNOON COMPACT BANNER -->
       <div class="interview-card">
-        <a href="https://hackernoon.com/meet-the-writer-hacker-noons-contributor-vladimir-sinitsyn-seo-practitioner-and-researcher" target="_blank" rel="noopener">
-          <img src="https://hackernoon.imgix.net/images/Rd8z9ArVMycSceC003hxVrAXoj23-h893bph.jpeg?auto=format%2Ccompress&w=1200" alt="HackerNoon Interview - Vladimir Sinitsyn" class="interview-image">
-        </a>
-        <div class="interview-content">
-          <div class="interview-text">
-            <p>Exclusive Interview</p>
-            <h3>Meet the Writer: HackerNoon's Contributor Spotlight</h3>
+        <div class="interview-info">
+          <div class="interview-meta">
+            <img src="https://hackernoon.com/favicon.ico" alt="HackerNoon Logo">
+            <span>Exclusive Editorial Interview</span>
           </div>
+          <h3>Meet the Writer: Vladimir Sinitsyn on the Future of AI Search</h3>
+          <p>An in-depth discussion on shifting from traditional SEO to Generative Engine Optimization (GEO) and Entity Architecture.</p>
+        </div>
+        <div class="interview-action">
           <a href="https://hackernoon.com/meet-the-writer-hacker-noons-contributor-vladimir-sinitsyn-seo-practitioner-and-researcher" target="_blank" rel="noopener" class="btn-hackernoon">
-            Read Interview
+            Read Interview &rarr;
           </a>
         </div>
       </div>
