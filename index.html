@@ -9,7 +9,7 @@
   <title>Vladimir Sinitsyn — GEO &amp; AI Search Researcher</title>
 
   <meta name="description"
-        content="Vladimir Sinitsyn — GEO (Generative Engine Optimization) specialist and AI Search researcher. Creator of the SEO-Module analytical complex and author of 'GEO and AI Search'.">
+        content="Vladimir Sinitsyn — GEO (Generative Engine Optimization) specialist and AI Search researcher. Developer of the AI Visibility Framework and creator of the SEO-Module software.">
 
   <meta name="author" content="Vladimir Sinitsyn">
 
@@ -88,6 +88,7 @@
       font-size: 15px;
       font-weight: 650;
       letter-spacing: -.02em;
+      white-space: nowrap;
     }
 
     .brand span {
@@ -104,6 +105,7 @@
 
     nav a {
       transition: color .2s ease;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -138,7 +140,7 @@
     h1 {
       max-width: 980px;
       margin: 0;
-      font-size: clamp(42px, 6vw, 80px);
+      font-size: clamp(40px, 6vw, 78px);
       line-height: 1.02;
       letter-spacing: -.055em;
       font-weight: 650;
@@ -385,9 +387,9 @@
 
     h2 {
       margin: 0;
-      font-size: 36px;
+      font-size: 34px;
       letter-spacing: -.045em;
-      line-height: 1.1;
+      line-height: 1.15;
     }
 
     .research-grid {
@@ -600,66 +602,79 @@
       color: var(--text);
     }
 
-    /* MOBILE */
+    /* MOBILE VIEWPORT */
     @media (max-width: 760px) {
       .container {
         width: min(calc(100% - 32px), var(--max));
       }
       .header-inner {
-        min-height: 68px;
+        min-height: auto;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
       }
+      /* Навигация на смартфонах не исчезает, а аккуратно прокручивается */
       nav {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        gap: 18px;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+      nav::-webkit-scrollbar {
         display: none;
       }
       .hero {
-        padding: 80px 0 75px;
+        padding: 60px 0 65px;
       }
       .hero-description {
-        font-size: 18px;
+        font-size: 17px;
       }
       .intro,
       .about {
         grid-template-columns: 1fr;
         gap: 25px;
-        padding: 65px 0;
+        padding: 55px 0;
       }
       .intro-text {
-        font-size: 22px;
+        font-size: 21px;
       }
       .section {
-        padding: 65px 0;
+        padding: 55px 0;
       }
       .research-grid {
         grid-template-columns: 1fr;
       }
       .featured {
-        padding: 65px 0;
+        padding: 55px 0;
       }
       .featured-card {
         grid-template-columns: 1fr;
-        gap: 35px;
-        padding: 30px;
+        gap: 25px;
+        padding: 26px;
       }
       .footer-inner {
         flex-direction: column;
       }
       .book-card {
         grid-template-columns: 1fr;
-        padding: 30px;
-        gap: 30px;
+        padding: 26px;
+        gap: 25px;
       }
       .book-cover-img {
-        max-width: 200px;
+        max-width: 180px;
         margin: 0 auto;
       }
       .interview-card {
         flex-direction: column;
         align-items: flex-start;
-        padding: 25px;
-        gap: 25px;
+        padding: 22px;
+        gap: 20px;
       }
       .faq-item {
-        padding: 20px 22px;
+        padding: 18px 20px;
       }
     }
   </style>
@@ -694,6 +709,7 @@
         "description": "Vladimir Sinitsyn is a GEO (Generative Engine Optimization) specialist and AI Search researcher. Developer of the open-source AI Visibility Framework, creator of the SEO-Module analytical software complex, and founder of System SEO.",
         "url": "https://vladimirsinitsyn.com/",
         "image": "https://vladimirsinitsyn.com/b4e7a509262a526d66664356dbee1646_e49d976d-e283-46ad-9b8d-4df83db0cfd3.jpg",
+        "mainEntityOfPage": { "@id": "https://vladimirsinitsyn.com/#webpage" },
         "identifier": {
           "@type": "PropertyValue",
           "propertyID": "ORCID",
@@ -737,6 +753,8 @@
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "author": { "@id": "https://vladimirsinitsyn.com/#person" },
+        "creator": { "@id": "https://vladimirsinitsyn.com/#person" },
+        "publisher": { "@id": "https://vladimirsinitsyn.com/#organization" },
         "description": "An analytical software platform for automated data checks, on-page optimization, and AI Search audit pipelines."
       },
       {
@@ -843,15 +861,15 @@
 
         <div class="book-info">
           <div class="featured-label" style="color: #aaa; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 20px;">
-            Now Available Worldwide
+            Now Available Worldwide · ISBN: 9798237710076
           </div>
           
-          <h2 style="font-size: clamp(28px, 4vw, 42px); line-height: 1.1; margin: 0 0 15px 0; color: white;">
-            GEO and AI Search. How to Build Verifiable Visibility in Generative Answers.
+          <h2 style="font-size: clamp(26px, 3.8vw, 40px); line-height: 1.15; margin: 0 0 15px 0; color: white;">
+            GEO and AI Search. How to Build Verifiable Visibility in Generative Answers for Your Business
           </h2>
           
           <p style="color: #ccc; font-size: 16px; line-height: 1.6; margin: 0; max-width: 600px;">
-            Stop guessing how AI systems see your company. Written by a Data Engineer and SEO architect with 20 years of experience, this playbook provides a strict, mathematically verifiable protocol for Generative Engine Optimization. Learn how to protect your brand's digital entity from the "Silent Logic Bomb" and dominate AI search.
+            Stop guessing how AI systems see your company. Written by an SEO architect and search practitioner with 20 years of experience, this playbook provides a strict, mathematically verifiable protocol for Generative Engine Optimization. Learn how to protect your brand's digital entity from the "Silent Logic Bomb" and build a measurable approach to visibility in AI search.
           </p>
 
           <div class="book-links">
@@ -1232,7 +1250,7 @@
   <div class="container footer-inner">
 
     <div>
-      © 2026 Vladimir Sinitsyn | Verified Researcher ORCID iD: 0009-0008-2784-2888
+      © 2026 Vladimir Sinitsyn | ORCID iD: 0009-0008-2784-2888
     </div>
 
     <div class="footer-links">
