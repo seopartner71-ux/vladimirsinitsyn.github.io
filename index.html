@@ -6,18 +6,18 @@
   <meta name="yandex-verification" content="0112c44aad6b5063" />
   <meta name="google-site-verification" content="6IZXleCmgFrZ7jOSQSYSG_SQy1EsoiOpnP6RbhRUMZw" />
 
-  <title>Vladimir Sinitsyn — GEO Architect & AI Search Expert</title>
+  <title>Vladimir Sinitsyn — GEO &amp; AI Search Researcher</title>
 
   <meta name="description"
-        content="Vladimir Sinitsyn — Developer of GEO (Generative Engine Optimization) methodologies, AI Search architect, and creator of the SEO-Module IT complex.">
+        content="Vladimir Sinitsyn — GEO (Generative Engine Optimization) specialist and AI Search researcher. Creator of the SEO-Module analytical complex and author of 'GEO and AI Search'.">
 
   <meta name="author" content="Vladimir Sinitsyn">
 
   <link rel="canonical" href="https://vladimirsinitsyn.com/">
 
-  <meta property="og:title" content="Vladimir Sinitsyn — GEO & AI Search">
+  <meta property="og:title" content="Vladimir Sinitsyn — GEO &amp; AI Search Researcher">
   <meta property="og:description"
-        content="Researching how people, brands and information become visible to AI Search.">
+        content="Researching how people, brands and technical information become visible and verifiable in AI Search.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vladimirsinitsyn.com/">
 
@@ -97,7 +97,7 @@
 
     nav {
       display: flex;
-      gap: 28px;
+      gap: 24px;
       color: var(--muted);
       font-size: 14px;
     }
@@ -138,18 +138,23 @@
     h1 {
       max-width: 980px;
       margin: 0;
-      font-size: clamp(48px, 7vw, 88px);
-      line-height: .98;
-      letter-spacing: -.065em;
+      font-size: clamp(42px, 6vw, 80px);
+      line-height: 1.02;
+      letter-spacing: -.055em;
       font-weight: 650;
     }
 
     .hero-description {
-      max-width: 690px;
-      margin: 38px 0 0;
+      max-width: 720px;
+      margin: 34px 0 0;
       color: var(--muted);
       font-size: 20px;
       line-height: 1.6;
+    }
+
+    .hero-description strong {
+      color: var(--text);
+      font-weight: 550;
     }
 
     .hero-actions {
@@ -361,7 +366,7 @@
       color: #000;
     }
 
-    /* RESEARCH & PUBLICATIONS */
+    /* RESEARCH & PRACTICE GRIDS */
     section.bordered-section {
       border-bottom: 1px solid var(--border);
     }
@@ -382,7 +387,7 @@
       margin: 0;
       font-size: 36px;
       letter-spacing: -.045em;
-      line-height: 1;
+      line-height: 1.1;
     }
 
     .research-grid {
@@ -407,20 +412,25 @@
     .number {
       color: #999;
       font-size: 12px;
-      margin-bottom: 55px;
+      margin-bottom: 30px;
+      font-family: monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .research-card h3 {
       margin: 0 0 9px;
-      font-size: 22px;
+      font-size: 21px;
       letter-spacing: -.025em;
+      line-height: 1.25;
     }
 
     .research-card p {
       margin: 0;
       color: var(--muted);
       font-size: 15px;
-      max-width: 470px;
+      line-height: 1.6;
+      max-width: 490px;
     }
     
     /* PUBLICATIONS LIST */
@@ -479,6 +489,39 @@
     
     .pub-link:hover {
       border-color: #0056b3;
+    }
+
+    /* FAQ LIST */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 28px 32px;
+      transition: border-color .2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: #999;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 12px 0;
+      font-size: 19px;
+      letter-spacing: -.02em;
+      color: var(--text);
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
     }
 
     /* FEATURED */
@@ -615,47 +658,86 @@
         padding: 25px;
         gap: 25px;
       }
+      .faq-item {
+        padding: 20px 22px;
+      }
     }
   </style>
 
-  <!-- Entity Structured Data (Person + Book) -->
+  <!-- RIGOROUS HARMONIZED ENTITY GRAPH -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://vladimirsinitsyn.com/#website",
+        "url": "https://vladimirsinitsyn.com/",
+        "name": "Vladimir Sinitsyn — GEO & AI Search Hub",
+        "publisher": { "@id": "https://vladimirsinitsyn.com/#person" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://vladimirsinitsyn.com/#webpage",
+        "url": "https://vladimirsinitsyn.com/",
+        "name": "Vladimir Sinitsyn — GEO & AI Search Researcher",
+        "isPartOf": { "@id": "https://vladimirsinitsyn.com/#website" },
+        "mainEntity": { "@id": "https://vladimirsinitsyn.com/#person" }
+      },
+      {
         "@type": "Person",
         "@id": "https://vladimirsinitsyn.com/#person",
         "name": "Vladimir Sinitsyn",
+        "alternateName": ["Владимир Синицын", "Vladimir Sinitcyn"],
+        "jobTitle": "GEO & AI Search Researcher",
+        "description": "Vladimir Sinitsyn is a GEO (Generative Engine Optimization) specialist and AI Search researcher. Developer of the open-source AI Visibility Framework, creator of the SEO-Module analytical software complex, and founder of System SEO.",
         "url": "https://vladimirsinitsyn.com/",
-        "jobTitle": "GEO Architect & AI Search Expert",
-        "description": "Developer of GEO (Generative Engine Optimization) methodologies and creator of the SEO-Module software.",
+        "image": "https://vladimirsinitsyn.com/b4e7a509262a526d66664356dbee1646_e49d976d-e283-46ad-9b8d-4df83db0cfd3.jpg",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0008-2784-2888"
+        },
         "knowsAbout": [
           "Generative Engine Optimization",
           "GEO",
           "AI Visibility",
+          "Answer Engine Optimization",
           "Entity SEO",
-          "Large Language Models",
-          "RAG Architecture"
+          "RAG Architecture",
+          "Technical SEO"
         ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "System SEO (Системное SEO)",
-          "url": "https://systemnoe-seo.ru/"
-        },
+        "worksFor": { "@id": "https://vladimirsinitsyn.com/#organization" },
         "sameAs": [
-          "https://github.com/seopartner71-ux",
           "https://orcid.org/0009-0008-2784-2888",
-          "https://zenodo.org/records/22762586",
+          "https://github.com/seopartner71-ux",
+          "https://doi.org/10.5281/zenodo.22762586",
           "https://osf.io/preprints/metaarxiv/2syjb",
           "https://hackernoon.com/u/seotula",
           "https://independent.academia.edu/VladimirSinitsyn",
           "https://www.crunchbase.com/person/vladimir-sinitsyn",
           "https://twitter.com/Partner71Seo",
           "https://systemnoe-seo.ru/",
-          "https://www.cossa.ru/trends/351418/",
-          "https://hackernoon.com/meet-the-writer-hacker-noons-contributor-vladimir-sinitsyn-seo-practitioner-and-researcher"
+          "https://books.apple.com/us/book/geo-and-ai-search-how-to-build-verifiable-visibility/id6822404827"
         ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://vladimirsinitsyn.com/#organization",
+        "name": "System SEO",
+        "alternateName": "Системное SEO",
+        "url": "https://systemnoe-seo.ru/",
+        "founder": { "@id": "https://vladimirsinitsyn.com/#person" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://vladimirsinitsyn.com/#software",
+        "name": "SEO-Module",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "author": { "@id": "https://vladimirsinitsyn.com/#person" },
+        "description": "An analytical software platform for automated data checks, on-page optimization, and AI Search audit pipelines."
       },
       {
         "@type": "Book",
@@ -664,6 +746,7 @@
         "author": { "@id": "https://vladimirsinitsyn.com/#person" },
         "isbn": "9798237710076",
         "inLanguage": "en",
+        "genre": "Search Engine Optimization & Artificial Intelligence",
         "url": "https://books.apple.com/us/book/geo-and-ai-search-how-to-build-verifiable-visibility/id6822404827"
       }
     ]
@@ -678,15 +761,17 @@
   <div class="container header-inner">
 
     <a href="/" class="brand">
-      Vladimir Sinitsyn <span>/ GEO & AI Search</span>
+      Vladimir Sinitsyn <span>/ GEO &amp; AI Search</span>
     </a>
 
     <nav>
       <a href="#book">Book</a>
       <a href="#research">Research</a>
+      <a href="#practice">Practice</a>
       <a href="#publications">Publications</a>
       <a href="#topics">Topics</a>
       <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
     </nav>
 
   </div>
@@ -704,20 +789,20 @@
       </div>
 
       <h1>
-        Researching how people and brands become visible to AI.
+        Vladimir Sinitsyn — GEO &amp; AI Search Researcher
       </h1>
 
       <p class="hero-description">
-        Vladimir Sinitsyn is a GEO & AI Search Architect. Developer of GEO methodologies for e-commerce, creator of the <strong>SEO-Module</strong> IT complex, and founder of the <strong>System SEO</strong> agency. Top-5 SEO Expert CIS.
+        Vladimir Sinitsyn is a GEO (Generative Engine Optimization) specialist and AI Search researcher. He develops methodologies for AI Visibility, Entity SEO and generative search, and is the creator of the <strong>SEO-Module</strong> analytical software complex and founder of <strong>System SEO</strong>.
       </p>
 
       <div class="hero-actions">
         <a class="button primary" href="#book">
-          Read my new book
+          Explore the Book
         </a>
 
-        <a class="button secondary" href="#research">
-          Explore research
+        <a class="button secondary" href="#practice">
+          Consulting &amp; Practice
         </a>
       </div>
 
@@ -774,9 +859,9 @@
               Apple Books
             </a>
             <a href="https://www.barnesandnoble.com/w/geo-and-ai-search-how-to-build-verifiable-visibility-in-generative-answers-for-your-business-vladimir-sinitsyn/1151663719?ean=2940197249173" target="_blank" rel="noopener" class="btn-book secondary">
-              Barnes & Noble
+              Barnes &amp; Noble
             </a>
-            <a href="https://www.kobo.com/fi/en/ebook/geo-and-ai-search-how-to-build-verifiable-visibility-in-generative-answers-for-your-business?sId=e54f2b75-0f13-492f-9b59-3a87dde2d1aa&ssId=pXjhYrFF6AO5DaAtU6g7Y" target="_blank" rel="noopener" class="btn-book secondary">
+            <a href="https://www.kobo.com/fi/en/ebook/geo-and-ai-search-how-to-build-verifiable-visibility-in-generative-answers-for-your-business?sId=e54f2b75-0f13-492f-9b59-3a87dde2d1aa&amp;ssId=pXjhYrFF6AO5DaAtU6g7Y" target="_blank" rel="noopener" class="btn-book secondary">
               Kobo
             </a>
           </div>
@@ -840,6 +925,56 @@
 
   </section>
 
+  <!-- CONSULTING & GEO PRACTICE -->
+  <section id="practice" class="bordered-section">
+
+    <div class="container section">
+
+      <div class="section-heading">
+        <h2>Consulting &amp; GEO Practice</h2>
+        <span class="section-label">Applied Methodologies</span>
+      </div>
+
+      <div class="research-grid">
+
+        <article class="research-card">
+          <div class="number">PRACTICE 01</div>
+          <h3>AI Visibility &amp; Citation Audits</h3>
+          <p>
+            Evaluation of brand visibility, entity recognition and citations across ChatGPT, Perplexity, Google Gemini and AI Overviews.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="number">PRACTICE 02</div>
+          <h3>Entity &amp; Knowledge Graph Architecture</h3>
+          <p>
+            Development of structured digital entities, Schema.org architecture and information consistency for search engines and AI systems.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="number">PRACTICE 03</div>
+          <h3>GEO Strategy &amp; Implementation</h3>
+          <p>
+            Development and implementation of Generative Engine Optimization strategies for e-commerce and B2B companies.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="number">PRACTICE 04</div>
+          <h3>Cross-Lingual AI Visibility Research</h3>
+          <p>
+            Analysis of brand recognition, information retrieval and AI-generated recommendations across languages and markets.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <!-- FEATURED RESEARCH -->
   <section class="bordered-section">
@@ -885,7 +1020,7 @@
   <section id="publications" class="bordered-section">
     <div class="container section">
       <div class="section-heading">
-        <h2>Publications & Media</h2>
+        <h2>Publications &amp; Media</h2>
         <span class="section-label">Articles and Case Studies</span>
       </div>
       
@@ -910,7 +1045,7 @@
         
         <!-- ACADEMIC PREPRINTS (ZENODO & OSF) -->
         <article class="pub-item academic">
-          <div class="pub-meta" style="color: #0056b3;"><strong>CERN & MetaArXiv</strong> / Academic Preprints</div>
+          <div class="pub-meta" style="color: #0056b3;"><strong>CERN &amp; MetaArXiv</strong> / Academic Preprints</div>
           <h3>Cross-Lingual RAG Asymmetry and Multilingual Entity Resolution Discrepancies in LLMs</h3>
           <p style="color: var(--muted); font-size: 14px; margin-bottom: 12px; line-height: 1.5;">
             An empirical investigation into AI Visibility boundaries, LLM hallucinations, and cross-lingual RAG asymmetry.
@@ -926,7 +1061,7 @@
         </article>
 
         <article class="pub-item">
-          <div class="pub-meta"><strong>Cossa.ru</strong> / Risk Management & AI</div>
+          <div class="pub-meta"><strong>Cossa.ru</strong> / Risk Management &amp; AI</div>
           <h3>Как ошибка AI стоила клиенту покупателя и что мы построили в агентстве</h3>
           <a href="https://www.cossa.ru/trends/351418/" target="_blank" rel="noopener" class="pub-link">Read article &rarr;</a>
         </article>
@@ -1022,7 +1157,7 @@
 
 
   <!-- ABOUT WITH PHOTO -->
-  <section id="about">
+  <section id="about" class="bordered-section">
 
     <div class="container section about">
 
@@ -1039,7 +1174,7 @@
         <!-- Текст -->
         <div style="flex: 1; min-width: 250px; font-size: 18px; color: #444; line-height: 1.6;">
           <p style="margin-top: 0; margin-bottom: 20px;">
-            I'm <strong>Vladimir Sinitsyn</strong>, a GEO & AI Search architect working at the intersection of SEO, search technology, and artificial intelligence. I am the developer of GEO methodologies for the CIS market and the founder of <a href="https://seo-modul.pro" target="_blank" style="text-decoration: underline;">SEO-Module</a> and System SEO agency.
+            I'm <strong>Vladimir Sinitsyn</strong>, a GEO &amp; AI Search architect working at the intersection of SEO, search technology, and artificial intelligence. I am the developer of GEO methodologies for the CIS market and the founder of <a href="https://seo-modul.pro" target="_blank" style="text-decoration: underline;">SEO-Module</a> and System SEO agency.
           </p>
           <p style="margin-bottom: 0;">
             This website is my research hub — a place for experiments, observations, case studies and ideas about how search is changing in the age of generative AI.
@@ -1050,6 +1185,43 @@
 
     </div>
 
+  </section>
+
+  <!-- FACTUAL FAQ SECTION -->
+  <section id="faq">
+    <div class="container section">
+
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <span class="section-label">Factual Overview</span>
+      </div>
+
+      <div class="faq-list">
+
+        <article class="faq-item">
+          <h3>Who is Vladimir Sinitsyn?</h3>
+          <p>
+            Vladimir Sinitsyn is a GEO (Generative Engine Optimization) specialist and AI Search researcher. He works at the intersection of search technology, generative AI and digital entity architecture. He is the author of <em>GEO and AI Search</em> and the creator of the SEO-Module analytical software complex.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>What is Vladimir Sinitsyn known for?</h3>
+          <p>
+            Vladimir Sinitsyn is known for his research into AI Visibility, Generative Engine Optimization, cross-lingual entity recognition and the changing relationship between traditional search engines and generative AI systems.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>What is the SEO-Module project?</h3>
+          <p>
+            SEO-Module is an analytical software project developed by Vladimir Sinitsyn. It focuses on SEO processes, data analysis, content workflows and AI-assisted search optimization.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
   </section>
 
 </main>
